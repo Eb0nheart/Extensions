@@ -55,7 +55,7 @@ namespace ExtensionsTests.ConversionTests
         public void StoneToKilograms_Works()
         {
             double value = 3.46;
-            double expectedValue = 22.0;
+            double expectedValue = 21.97;
 
             double result = value.StoneToKilograms();
 
@@ -66,7 +66,7 @@ namespace ExtensionsTests.ConversionTests
         public void StoneToPounds_Works()
         {
             double value = 3.46;
-            double expectedValue = 48.50;
+            double expectedValue = 48.44;
 
             double result = value.StoneToPounds();
 
