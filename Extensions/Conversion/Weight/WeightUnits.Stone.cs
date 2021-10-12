@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Extensions.Conversion.WeightUnits.Stone
+namespace Extensions.Conversion.Weight.Stone
 {
     public static partial class WeightUnits
     {

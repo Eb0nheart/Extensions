@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Extensions.Conversion.WeightUnits.Pounds
+namespace Extensions.Conversion.Weight.Pounds
 {
     public static partial class WeightUnits
     {

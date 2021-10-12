@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Extensions.Conversion.WeightUnits.Kilograms
+namespace Extensions.Conversion.Weight.Kilograms
 {
     public static partial class WeightUnits
     {

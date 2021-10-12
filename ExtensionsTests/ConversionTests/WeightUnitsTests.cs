@@ -1,6 +1,6 @@
-﻿using Extensions.Conversion.WeightUnits.Kilograms;
-using Extensions.Conversion.WeightUnits.Pounds;
-using Extensions.Conversion.WeightUnits.Stone;
+﻿using Extensions.Conversion.Weight.Kilograms;
+using Extensions.Conversion.Weight.Pounds;
+using Extensions.Conversion.Weight.Stone;
 using NUnit.Framework;
 
 namespace ExtensionsTests.ConversionTests
