@@ -12,28 +12,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      configuration: 'Release'
-      dotnet-version: ['5.0.x']
+      matrix:
+        configuration: 'Release'
+        dotnet-version: ['5.0.x']
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK ${{ dotnet-version }}
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v1.7.2
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
       - name: Build & Restore
-        run: dotnet build --configuration ${{ configuration }}
+        run: dotnet build --configuration ${{ matrix.configuration }}
 
       - name: Test with dotnet
-        run: dotnet test --logger trx --results-directory "TestResults-${{ dotnet-version }}"
+        run: dotnet test --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
 
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v2
         with:
-          name: dotnet-results-${{ dotnet-version }}
-          path: TestResults-${{ dotnet-version }}
+          name: dotnet-results-${{ matrix.dotnet-version }}
+          path: TestResults-${{ matrix.dotnet-version }}
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
       
