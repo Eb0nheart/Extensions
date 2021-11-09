@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using Extensions.Utility;
+using System.Collections.ObjectModel;
 
 namespace ExtensionsTests.UtilityTests;
 
