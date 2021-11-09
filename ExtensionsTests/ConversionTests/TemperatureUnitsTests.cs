@@ -1,74 +1,72 @@
 ﻿using Extensions.Conversion;
-using NUnit.Framework;
 
-namespace ExtensionsTests.ConversionTests
+namespace ExtensionsTests.ConversionTests;
+
+public class TemperatureUnitsTests
 {
-    public class TemperatureUnitsTests
+    [Test]
+    public void CelsiusToFahrenheit_Works()
     {
-        [Test]
-        public void CelsiusToFahrenheit_Works()
-        {
-            double value = 22.0;
-            double expectedResult = 71.6;
+        double value = 22.0;
+        double expectedResult = 71.6;
 
-            double result = value.CelsiusToFahrenheit();
+        double result = value.CelsiusToFahrenheit();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
+    }
 
-        [Test]
-        public void CelsiusToKelvin_Works()
-        {
-            double value = 22.0;
-            double expectedResult = 295.15;
+    [Test]
+    public void CelsiusToKelvin_Works()
+    {
+        double value = 22.0;
+        double expectedResult = 295.15;
 
-            double result = value.CelsiusToKelvin();
+        double result = value.CelsiusToKelvin();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
+    }
 
-        [Test]
-        public void FahrenheitToCelsius_Works()
-        {
-            double value = 71.6;
-            double expectedResult = 22.0;
+    [Test]
+    public void FahrenheitToCelsius_Works()
+    {
+        double value = 71.6;
+        double expectedResult = 22.0;
 
-            double result = value.FahrenheitToCelsius();
+        double result = value.FahrenheitToCelsius();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
+    }
 
-        [Test]
-        public void FahrenheitToKelvin_Works()
-        {
-            double value = 71.6;
-            double expectedResult = 295.15;
+    [Test]
+    public void FahrenheitToKelvin_Works()
+    {
+        double value = 71.6;
+        double expectedResult = 295.15;
 
-            double result = value.FahrenheitToKelvin();
+        double result = value.FahrenheitToKelvin();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
+    }
 
-        [Test]
-        public void KelvinToCelsius_Works()
-        {
-            double value = 295.15;
-            double expectedResult = 22.0;
+    [Test]
+    public void KelvinToCelsius_Works()
+    {
+        double value = 295.15;
+        double expectedResult = 22.0;
 
-            double result = value.KelvinToCelsius();
+        double result = value.KelvinToCelsius();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
+    }
 
-        [Test]
-        public void KelvinToFahrenheit_Works()
-        {
-            double value = 295.15;
-            double expectedResult = 71.6;
+    [Test]
+    public void KelvinToFahrenheit_Works()
+    {
+        double value = 295.15;
+        double expectedResult = 71.6;
 
-            double result = value.KelvinToFahrenheit();
+        double result = value.KelvinToFahrenheit();
 
-            Assert.AreEqual(expectedResult, result);
-        }
+        Assert.AreEqual(expectedResult, result);
     }
 }
