@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         configuration: ['Release']
-        dotnet-version: ['5.0.x']
+        dotnet-version: ['6.x.x']
 
     steps:
       - uses: actions/checkout@v2
