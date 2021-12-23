@@ -1,4 +1,6 @@
-﻿namespace ExtensionsTests.Mathematics;
+﻿using Extensions.Mathematics;
+
+namespace ExtensionsTests.Mathematics;
 
 public class Multiplication
 {
@@ -23,9 +25,9 @@ public class Multiplication
     [TestCase(5.8)]
     [TestCase(100.4)]
     [TestCase(173781263.7)]
-    public void Multiply_double_works(int multiplier)
+    public void Multiply_double_works(double multiplier)
     {
-        var baseNumber = 5;
+        var baseNumber = 5.097;
         var expectedResult = baseNumber * multiplier;
 
         var result = baseNumber.MultiplyBy(multiplier);
@@ -34,13 +36,10 @@ public class Multiplication
     }
 
     [Test]
-    [TestCase("0.00276234m")]
-    [TestCase("0.1872m")]
-    [TestCase("1.1722m")]
-    [TestCase("1.0182372m")]
-    public void Multiply_decimal_works(decimal multiplier)
+    public void Multiply_decimal_works()
     {
-        var baseNumber = 5;
+        var baseNumber = 5.312m;
+        var multiplier = 0.1872m;
         var expectedResult = baseNumber * multiplier;
 
         var result = baseNumber.MultiplyBy(multiplier);
